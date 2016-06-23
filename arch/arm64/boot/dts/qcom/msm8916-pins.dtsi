@@ -168,40 +168,6 @@
 		};
 	};
 
-	spi4_default: spi4_default {
-		pinmux {
-			function = "blsp_spi4";
-			pins = "gpio12", "gpio13", "gpio15";
-		};
-		pinmux_cs {
-			function = "gpio";
-			pins = "gpio14";
-		};
-		pinconf {
-			pins = "gpio12", "gpio13", "gpio14", "gpio15";
-			drive-strength = <12>;
-			bias-disable;
-		};
-		pinconf_cs {
-			pins = "gpio14";
-			drive-strength = <2>;
-			bias-disable;
-			output-high;
-		};
-	};
-
-	spi4_sleep: spi4_sleep {
-		pinmux {
-			function = "gpio";
-			pins = "gpio12", "gpio13", "gpio14", "gpio15";
-		};
-		pinconf {
-			pins = "gpio12", "gpio13", "gpio14", "gpio15";
-			drive-strength = <2>;
-			bias-pull-down;
-		};
-	};
-
 	spi5_default: spi5_default {
 		pinmux {
 			function = "blsp_spi5";
